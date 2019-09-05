@@ -1,0 +1,13 @@
+[Unit]
+Description=Watchdog test
+
+[Service]
+Type=notify
+ExecStart=/home/roedy/test/sd_watchdog/a.out
+Restart=always
+RestartSec=1
+WatchdogSec=5
+
+[Install]
+WantedBy=multi-user.target
+
